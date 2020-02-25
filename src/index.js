@@ -30,6 +30,7 @@ function renderBreeds(json) {
     li.innerText = breed;
     document.getElementById("dog-breeds").appendChild(li);
   })
+  dropDown();
   colorBreeds();
 }
 
@@ -44,7 +45,6 @@ function colorBreeds() {
 
 function dropDown() {
   let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
-  debugger
   document.getElementById("breed-dropdown").addEventListener("change", function() {
     breeds.forEach(breed => {
       if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
