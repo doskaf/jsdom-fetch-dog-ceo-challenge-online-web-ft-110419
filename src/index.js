@@ -6,6 +6,10 @@ fetch(imgUrl)
 .then(resp => resp.json())
 .then(json => renderImages(json));
 
+document.addEventListener("DOMContentLoaded", function() {
+  dropDown();
+});
+
 function renderImages(json) {
   json['message'].forEach(dogImg => {
     let img = document.createElement('img');
