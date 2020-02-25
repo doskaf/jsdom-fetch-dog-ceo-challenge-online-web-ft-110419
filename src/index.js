@@ -26,14 +26,17 @@ function renderBreeds(json) {
     li.innerText = breed;
     document.getElementById("dog-breeds").appendChild(li);
   })
+  colorBreeds();
 }
 
-let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
-breeds.forEach(breed => {
-  breed.innerText.addEventListener("click", function() {
-    breed.style = "color:blue"
-  });
-})
+function colorBreeds() {
+  let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
+  breeds.forEach(breed => {
+    breed.innerText.addEventListener("click", function() {
+      breed.style = "color:blue"
+    });
+  })
+}
 
 document.getElementById("breed-dropdown").addEventListener("mouseover", function() {
   breeds.forEach(breed => {
