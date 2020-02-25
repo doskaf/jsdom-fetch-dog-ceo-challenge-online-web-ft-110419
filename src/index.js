@@ -46,7 +46,7 @@ function dropDown() {
       if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
         breed.style.display = "none"
       } else {
-        breed.style.display = "block"
+        breed.style.display = "list-item"
       }
     });
   });
