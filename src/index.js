@@ -38,11 +38,12 @@ function colorBreeds() {
   })
 }
 
-function 
-document.getElementById("breed-dropdown").addEventListener("mouseover", function() {
-  breeds.forEach(breed => {
-    if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
-      breed.style.display = "none"
-    }
+function dropDown() {
+  document.getElementById("breed-dropdown").addEventListener("mouseover", function() {
+    breeds.forEach(breed => {
+      if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
+        breed.style.display = "none"
+      }
+    });
   });
-});
+}
