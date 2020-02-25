@@ -26,19 +26,28 @@ function renderBreeds(json) {
     li.innerText = breed;
     document.getElementById("dog-breeds").appendChild(li);
   })
+  dropDown();
+  colorBreeds();
 }
 
-let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
-breeds.forEach(breed => {
-  breed.innerText.addEventListener("click", function() {
-    breed.style = "color:blue"
-  });
-})
-
-document.getElementById("breed-dropdown").addEventListener("mouseover", function() {
+function colorBreeds() {
+  let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
   breeds.forEach(breed => {
-    if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
-      breed.style.display = "none"
-    }
+    breed.addEventListener("click", function() {
+      breed.style = "color:blue"
+    });
+  })
+}
+
+function dropDown() {
+  let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
+  document.getElementById("breed-dropdown").addEventListener("change", function() {
+    breeds.forEach(breed => {
+      if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
+        breed.style.display = "none"
+      } else {
+        breed.style.display = "list-item"
+      }
+    });
   });
-});
+}
