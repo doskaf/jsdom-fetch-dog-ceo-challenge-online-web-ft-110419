@@ -44,7 +44,7 @@ function colorBreeds() {
 
 function dropDown() {
   let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
-  document.getElementById("breed-dropdown").addEventListener("mouseover", function() {
+  document.getElementById("breed-dropdown").addEventListener("change", function() {
     breeds.forEach(breed => {
       if (breed.innerText[0] !== document.getElementById("breed-dropdown").value) {
         breed.style.display = "none"
