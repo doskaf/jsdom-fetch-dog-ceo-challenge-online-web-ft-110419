@@ -32,7 +32,7 @@ function renderBreeds(json) {
 function colorBreeds() {
   let breeds = document.getElementById("dog-breeds").querySelectorAll("li");
   breeds.forEach(breed => {
-    breed.innerText.addEventListener("click", function() {
+    breed.addEventListener("click", function() {
       breed.style = "color:blue"
     });
   })
